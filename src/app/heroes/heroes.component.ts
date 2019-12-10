@@ -1,6 +1,9 @@
+//Les dépendances ont jamais de points , sinon camelcase
+
 import { Component, OnInit } from '@angular/core';
 import { HeroService } from '../hero.service';
 import { Hero } from '../hero';
+
 
 //Pas obligé de mettre l'extension .ts
 
@@ -30,7 +33,9 @@ export class HeroesComponent implements OnInit {
 
   //Je lui donne une méthode qui retourne rien (void)
   getHeroes():void{
-    this.heroes = this.heroService.getHeroes()
+    this.heroService.getHeroes()
+    //Il le retourne les heroes de la liste car je suis connecté au service grace à l'observable
+    .subscribe(heroes => this.heroes = heroes)
   }
 
   //Methode onSelect
