@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+//Il nous faut les trois pour avoir la relation et faire tourner l'app
 export class AppComponent {
-  title = 'first-project';
+  title = 'Tour of Heroes';
 }
